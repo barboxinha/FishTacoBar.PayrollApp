@@ -1,32 +1,34 @@
 ﻿namespace FishTacoBar.PayrollApp.Models
 {
-    public class Manager : Staff
+    public class Admin : Staff
     {
-        private const float _managerHourlyRate = 60;
-        public int Allowance { get; private set; }
+        private const float _overtimeRate = 15.5f;
+        private const float _adminHourlyRate = 30;
 
-        public Manager(string name) : base(name, _managerHourlyRate)
+        public float Overtime { get; private set; }
+
+        public Admin(string name) : base(name, _adminHourlyRate)
         {
         }
 
         public override void CalculatePay()
         {
             base.CalculatePay();
-            Allowance = 1000;
 
             if (HoursWorked > 160)
             {
-                TotalPay = BasicPay + Allowance;
+                Overtime = _overtimeRate * (HoursWorked - 160);
             }
         }
 
         public override string ToString()
         {
             return "\nStaffName = " + StaffName +
-                   "\n_managerHourlyRate = " + _managerHourlyRate +
+                   "\n_overtimeRate = " + _overtimeRate +
+                   "\n_adminHourlyRate = " + _adminHourlyRate +
                    "\nHoursWorked = " + HoursWorked +
+                   "\nOvertime = " + Overtime +
                    "\nBasicPay = " + BasicPay +
-                   "\nAllowance = " + Allowance +
                    "\n\nTotalPay = " + TotalPay;
         }
     }
