@@ -10,6 +10,7 @@ namespace FishTacoBar.PayrollApp.Utils
         public List<Staff> ReadFile() 
         {
             List<Staff> employees = new List<Staff>();
+            float staffRate = 25f;
             string filePath = "staff.txt";
             string[] separator = { ", " };
             string[] result = new string[2];
@@ -32,19 +33,25 @@ namespace FishTacoBar.PayrollApp.Utils
                         }
                         else
                         {
-                            employees.Add(new Staff(result[0], 25f));
+                            employees.Add(new Staff(result[0], staffRate));
                         }
                     }
 
                     sr.Close();
                 }
+
+                return employees;
             }
             else
             {
-                Console.WriteLine("ERROR: File does not exist. Please add a file \"staff.txt\" to the app directory.");
+                string appDirectory = Directory.GetCurrentDirectory();
+                Console.WriteLine("ERROR: File does not exist. Please add a file \"staff.txt\" to the app directory: " + appDirectory);
+                Console.WriteLine("--------------------------------------------");
+                Console.WriteLine("Data row format should be the following:");
+                Console.WriteLine("\t\"Staff Name\", \"Role\"");
             }
 
-            return employees;
+            return null;
         }
     }
 }
