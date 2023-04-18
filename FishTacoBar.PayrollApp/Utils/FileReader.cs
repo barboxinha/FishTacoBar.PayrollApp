@@ -39,8 +39,6 @@ namespace FishTacoBar.PayrollApp.Utils
 
                     sr.Close();
                 }
-
-                return employees;
             }
             else
             {
@@ -51,7 +49,7 @@ namespace FishTacoBar.PayrollApp.Utils
                 Console.WriteLine("\t\"Staff Name\", \"Role\"");
             }
 
-            return null;
+            return employees;
         }
     }
 }

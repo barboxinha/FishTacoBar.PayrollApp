@@ -19,7 +19,7 @@ namespace FishTacoBar.PayrollApp
 
         public void GeneratePayStub(List<Staff> employees)
         {
-            Console.WriteLine("...Generating paystubs for {0} employees.", employees.Count);
+            Console.WriteLine("\r\n...Generating paystubs for {0} employees.", employees.Count);
             string filePath;
 
             if (employees != null)
@@ -65,7 +65,7 @@ namespace FishTacoBar.PayrollApp
 
         public void GenerateShortTimeSummary(List<Staff> employees)
         {
-            Console.WriteLine("...Generating short-time summary.");
+            Console.WriteLine("\r\n...Generating short-time summary.");
 
             var shortTimeQuery = from employee in employees
                                  where employee.HoursWorked < 10
@@ -81,7 +81,7 @@ namespace FishTacoBar.PayrollApp
 
                 foreach (var emp in shortTimeQuery)
                 {
-                    sw.WriteLine("Name of Staff: {0}, Hours Worked: {1}", emp.StaffName, emp.HoursWorked); 
+                    sw.WriteLine("Staff Name: {0}, Hours Worked: {1}", emp.StaffName, emp.HoursWorked); 
                 }
 
                 sw.Close();
