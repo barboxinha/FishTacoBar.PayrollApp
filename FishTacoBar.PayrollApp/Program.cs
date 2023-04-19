@@ -17,9 +17,11 @@ namespace FishTacoBar.PayrollApp
             int _payYear = 0;
 
             Console.WriteLine("FISH TACO BAR - Payroll App");
-            Console.WriteLine("***** =============== *****");
+            Console.WriteLine("");
+            Console.WriteLine("*********************************");
+            Console.WriteLine("*********************************");
 
-            // ***** Prompt user to input the year.
+            // ***** Prompt user to input the year. *****
             while (_payYear == 0)
             {
                 Console.WriteLine("\nPlease enter the year: ");
@@ -34,7 +36,7 @@ namespace FishTacoBar.PayrollApp
                 }
             }
 
-            // ***** Prompt user to input the month.
+            // ***** Prompt user to input the month. *****
             while (_payMonth == 0)
             {
                 Console.WriteLine("\nPlease enter the month: ");
@@ -55,7 +57,7 @@ namespace FishTacoBar.PayrollApp
                 }
             }
 
-            // ***** Read the staff file.
+            // ***** Read the staff file. *****
             _employees = _reader.ReadFile();
 
             for (int i = 0; i < _employees.Count; i++)
@@ -74,11 +76,11 @@ namespace FishTacoBar.PayrollApp
                 }
             }
 
-            // ***** Generate pay stubs for each employee.
+            // ***** Generate pay stubs for each employee. *****
             PayStub payStub = new PayStub(_payMonth, _payYear);
             payStub.GeneratePayStub(_employees);
             payStub.GenerateShortTimeSummary(_employees);
-            Console.WriteLine("Press any key to exit...");
+            Console.WriteLine("\r\nPress any key to exit...");
             Console.ReadKey();
         }
     }

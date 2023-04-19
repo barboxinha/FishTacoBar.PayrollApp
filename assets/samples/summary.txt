@@ -1,0 +1,4 @@
+Staff with less than 10 working hours
+
+Staff Name: Adrian, Hours Worked: 9
+Staff Name: Sebastian, Hours Worked: 8
