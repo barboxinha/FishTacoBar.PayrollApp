@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("FishTacoBar.PayrollApp")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Payroll software for FishTaco Bar.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("SmithGroup Inc.")]
+[assembly: AssemblyCompany("Marco Barboza")]
 [assembly: AssemblyProduct("FishTacoBar.PayrollApp")]
-[assembly: AssemblyCopyright("Copyright © SmithGroup Inc. 2023")]
+[assembly: AssemblyCopyright("Copyright © Marco Barboza 2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

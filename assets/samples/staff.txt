@@ -1,0 +1,6 @@
+Javier, Manager
+Elisa, Manager
+Adrian, Admin
+Juliana, Admin
+Carolina, Staff
+Sebastian, Staff
